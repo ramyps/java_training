@@ -9,7 +9,7 @@ import java.util.Scanner;
  * @author Ramy
  *
  */
-public class Stringloop {
+public class Day6_Stringloop {
 
 	/**
 	 * @param args

@@ -9,7 +9,7 @@ import java.util.Scanner;
  * @author Ramy
  *
  */
-public class Data_Types {
+public class Day1_Data_Types {
 
 	/**
 	 * @param args
@@ -34,7 +34,6 @@ public class Data_Types {
     private static final Scanner scanner = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
         int i1 = scanner.nextInt();
         scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 		

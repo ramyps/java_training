@@ -17,7 +17,7 @@ import java.util.*;
 import java.util.concurrent.*;
 import java.util.regex.*;
 
-public class Recursion {
+public class Day9_Recursion {
 
     // Complete the factorial function below.
     static int factorial(int n) {

@@ -15,7 +15,7 @@ import java.util.*;
 import java.util.concurrent.*;
 import java.util.regex.*;
 
-public class Conditional_Statements {
+public class Day3_Conditional_Statements {
 
 	/**
 	 * @param args

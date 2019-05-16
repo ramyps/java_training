@@ -2,10 +2,10 @@ package com.java.code30days.challenge.hackerrank;
 import java.io.*;
 import java.util.*;
 
-public class Person {
+public class Day4_Person {
     private int age;	
   
-	public Person(int initialAge) {
+	public Day4_Person(int initialAge) {
   		// Add some more code to run some checks on initialAge
           if(initialAge<0) {
             System.out.println("Age is not valid, setting age to 0.");
@@ -38,7 +38,7 @@ public class Person {
 		int T = sc.nextInt();
 		for (int i = 0; i < T; i++) {
 			int age = sc.nextInt();
-			Person p = new Person(age);
+			Day4_Person p = new Day4_Person(age);
 			p.amIOld();
 			for (int j = 0; j < 3; j++) {
 				p.yearPasses();

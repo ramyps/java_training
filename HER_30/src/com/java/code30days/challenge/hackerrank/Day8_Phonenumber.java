@@ -12,7 +12,7 @@ package com.java.code30days.challenge.hackerrank;
 import java.util.*;
 import java.io.*;
 
-class Phonenumber8{
+class Day8_Phonenumber {
   public static void main(String []argh){
       Scanner in = new Scanner(System.in);
       int n = in.nextInt();

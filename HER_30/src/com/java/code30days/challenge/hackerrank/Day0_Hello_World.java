@@ -13,7 +13,7 @@ import java.io.*;
 	import java.text.*;
 	import java.math.*;
 	import java.util.regex.*;
-public class Hello_World {
+public class Day0_Hello_World {
 	
 		public static void main(String[] args) {
 	        // Create a Scanner object to read input from stdin.

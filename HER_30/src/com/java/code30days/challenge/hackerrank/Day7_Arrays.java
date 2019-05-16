@@ -15,7 +15,7 @@ import java.util.*;
 import java.util.concurrent.*;
 import java.util.regex.*;
 
-public class Arrays_7 {
+public class Day7_Arrays {
 
 
 
