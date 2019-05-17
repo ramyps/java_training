@@ -13,8 +13,8 @@ Generate odd numbers up to 1000
 public class Odd1000 {
 
 	public static void main(String[] args) {
-		//print1000();
-		//odd1000();
+		print1000();
+		odd1000();
 		mul5odd1000();
 
 	}
