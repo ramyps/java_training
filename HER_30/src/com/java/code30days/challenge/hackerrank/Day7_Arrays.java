@@ -3,17 +3,7 @@ package com.java.code30days.challenge.hackerrank;
  * 
  */
 
-/**
- * @author Ramy
- *
- */
-import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.text.*;
-import java.util.*;
-import java.util.concurrent.*;
-import java.util.regex.*;
+import java.util.Scanner;
 
 public class Day7_Arrays {
 
@@ -39,7 +29,7 @@ public class Day7_Arrays {
 
         for(int l=0;l<arr2.length;l++)
         {
-        	System.out.print(arr2[l]+"\t");
+        	System.out.print(arr2[l]+" ");
         }
     }
 
@@ -50,10 +40,8 @@ public class Day7_Arrays {
 		System.out.println(len);
 		int swap[] = new int[len];
 		for(int j=0;j<len;j++) {
-			//System.out.println(len-(j+1)+ " "+j);
 			k = arr[len-(j+1)];
 			swap[j] = k;
-			//System.out.println(swap[j] +" "+ j);
 		}
 		return swap;
 		
