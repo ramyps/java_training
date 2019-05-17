@@ -1,7 +1,5 @@
 package com.practice.java.hackerrank;
-/**
- * 
- */
+
 
 /**
  * @author Ramy
