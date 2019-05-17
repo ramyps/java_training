@@ -30,7 +30,7 @@ public class Day10_Binary_Numbers {
 
 
 		String strBinary = Integer.toString(n, 2);
-		System.out.println(strBinary+" "+strBinary.length());
+	//	System.out.println(strBinary+" "+strBinary.length());
 		int n1=0, len=strBinary.length();
 		char n3='1';
 		arr = null;
@@ -47,7 +47,7 @@ public class Day10_Binary_Numbers {
 					//	System.out.println(strBinary.charAt(i)+" "+strBinary.charAt(i+1));
 					if((strBinary.charAt(i)==n3)&&(strBinary.charAt(i+1)==n3))
 					{
-						System.out.println("in if");
+				//		System.out.println("in if");
 						n1=n1+1;
 					}
 				}break;
