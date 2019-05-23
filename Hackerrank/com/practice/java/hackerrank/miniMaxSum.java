@@ -1,16 +1,11 @@
 package com.practice.java.hackerrank;
-import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.text.*;
-import java.util.*;
-import java.util.concurrent.*;
-import java.util.regex.*;
+import java.util.Scanner;
 
 public class miniMaxSum {
 
     // Complete the miniMaxSum function below.
-    static void miniMaxSum(int[] arr) {
+	private static void miniMaxSum(int[] arr) 
+    {
 
     	long c[] = null, min = 0,max = 0;
     	int len = arr.length;
@@ -23,12 +18,14 @@ public class miniMaxSum {
     		}
     		for (int j=0;j<c.length;j++)
     		{
-    			if(c[j]>c[j+1]) { 
+    			if(c[j]>c[j+1]) 
+    			{ 
     				min=c[j];
     				max=c[j+1];
     			}
     		}
     		System.out.println(min+" "+max);
+    		
     }
 
     private static final Scanner scanner = new Scanner(System.in);
@@ -47,5 +44,6 @@ public class miniMaxSum {
         miniMaxSum(arr);
 
         scanner.close();
-    }
+    }		
+	
 }
