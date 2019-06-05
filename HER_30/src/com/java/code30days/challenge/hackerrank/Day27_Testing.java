@@ -27,6 +27,8 @@ public class Day27_Testing {
 
     static class TestDataEmptyArray {
         public static int[] get_array() {
+        	
+        	
 			return null;
             // complete this function
         }
@@ -34,11 +36,15 @@ public class Day27_Testing {
 
     static class TestDataUniqueValues {
         public static int[] get_array() {
+        	
+        	
 			return null;
             // complete this function
         }
 
         public static int get_expected_result() {
+        	
+        	
 			return 0;
             // complete this function
         }
