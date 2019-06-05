@@ -39,6 +39,10 @@ class Names{
 		this.name = name;
 		this.email = email;
 	}
+	public String toString() 
+	{ 
+		return  this.name; 
+	} 
 
 }
 class Sortbyname implements Comparator<Names> {
@@ -70,30 +74,21 @@ public class Day28_RegEx {
 			firstName = firstNameEmailID[0];
 			emailID = firstNameEmailID[1];
 			if(emailID.endsWith(s)) {
-			names.add(new Names(firstName,emailID));
-		//	System.out.println(firstName);
+				names.add(new Names(firstName,emailID));
 			}
 		}
 		scanner.close();
 
-		
+
 		Collections.sort(names,new Sortbyname()); 
-		
-		 for(int i=0;i<names.size();i++) {
-		  System.out.println(names.get(i).toString()); 
-		  }
-		 
+
+		for(int i=0;i<names.size();i++) {
+			System.out.println(names.get(i).toString()); 
+		}
+
 
 		long endTime =System.currentTimeMillis(); 
 		System.out.println("It took " + (endTime - startTime) + " milliseconds");
 	}
 
-	/*
-	 * private static String[] findGmailNames(String[] firstNameEmailID) {
-	 * 
-	 * String names[]= null; String email[]=null; for(int
-	 * i=0;i<firstNameEmailID.length;i++) { if(i%2==0) { names[i] =
-	 * firstNameEmailID[i]; System.out.println(names[i]); }else { email[i] =
-	 * firstNameEmailID[i]; System.out.println(email[i]); } } return names; }
-	 */
 }
