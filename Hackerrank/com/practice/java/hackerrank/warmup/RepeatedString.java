@@ -44,6 +44,7 @@ public class RepeatedString {
         Scanner in = new Scanner(System.in);
         String s = in.next();
         long n = in.nextLong();
+       
         long count = 0;
         
         if(n > s.length()) {
