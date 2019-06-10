@@ -31,7 +31,7 @@ public class List {
 	        LinkedList<Integer> uni=new LinkedList<Integer>();
 	        int index=0;
 
-	        for(int i=0;i<=numbers.length;i++){
+	        for(int i=0;i<=numbers.size();i++){
 	        	
 	        }
 	        
