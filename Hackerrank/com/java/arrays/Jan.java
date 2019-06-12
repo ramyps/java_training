@@ -21,34 +21,41 @@ class Res
 		int result =0;
 		float sum = 0.0f;
 		int length = weights.size();
-		for(int i = 0;i < weights.size(); i++) {
-			for(int j=1; j< weights.size();j++) {
-				System.out.println("size 1 "+weights.size());
-				sum = weights.get(i)+weights.get(j);
-				System.out.println("sum "+sum);
-				if ((sum <=3.0) &&(sum >=1.5)) {
-					result ++;
-					weights.remove(i);
-					weights.remove(j);
-					System.out.println(i+" "+j+" removed");
-					System.out.println("size "+weights.size());
+		try {
+			while(weights.size()>0) {
 
-				}else if(weights.size()==1){
-					if(weights.get(i) >= 2.0) {
-						result ++;
-						weights.remove(i);
+
+				for(int i = 0;i < weights.size(); i++) {
+					for(int j=1; j< weights.size();j++) {
+						System.out.println("size1 "+weights.size());
+						sum = weights.get(i)+weights.get(j);
+						System.out.println("sum "+sum);
+						if ((sum <=3.0) &&(sum >=1.5)) {
+							result ++;
+							weights.remove(i);
+							weights.remove(j); 
+							System.out.println(i+" "+j+" removed");
+							//	System.out.println("size "+weights.size());
+
+						} 
+						else if(weights.size()==0){
+							result ++;
+							weights.remove(i); 
+
+						}
+
 					}
 
 				}
-			}
+			}}catch(Exception e) {
+				System.out.println("Exception");
 
-		}
+			}
 		return result;
+
 	}
 
 }
-
-
 public class Jan {
 
 	/**
