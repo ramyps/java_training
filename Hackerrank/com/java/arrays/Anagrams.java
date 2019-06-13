@@ -37,11 +37,13 @@ class Res1{
 	
 	public static String isCharanagram(List<String> s, List<Character> c) {
 		
-		String results="";
-		char[] searchchar;
+		String results = "";
+		Object[] searchchar;
+		List<String> search = null;
+
 		
 		for(int i = 0;i<s.size();i++) {
-			searchchar = s.toCharArray();
+			searchchar = s.toArray();
 			if(search.contains(searchchar)) {
 				s.remove(i);
 			}

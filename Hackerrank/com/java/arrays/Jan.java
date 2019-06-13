@@ -33,12 +33,16 @@ class Res
 						if ((sum <=3.0) &&(sum >=1.5)) {
 							result ++;
 							weights.remove(i);
+							if(j>1) {
 							weights.remove(j); 
-							System.out.println(i+" "+j+" removed");
+							System.out.println(i+" "+j+" removed");}
+							else {
+								result++;
+							}
 							//	System.out.println("size "+weights.size());
 
 						} 
-						else if(weights.size()==0){
+						else if(weights.size()>0){
 							result ++;
 							weights.remove(i); 
 
