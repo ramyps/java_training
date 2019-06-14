@@ -2,6 +2,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Personal Information Page</title>
 <style type="text/css">
 html, body {
 	width: 100%;
@@ -13,8 +15,8 @@ html, body {
 
 .container {
 	position: fixed;
-	width: 340px;
-	height: 600px;
+	width: 380px;
+	height: 420px;
 	top: 35%;
 	left: 50%;
 	margin-top: -140px;
@@ -44,7 +46,7 @@ input {
 	outline: none;
 }
 
-input[type=text] ,select{
+input[type=text] {
 	color: #000;
 	padding-left: 10px;
 	margin: 10px;
@@ -59,7 +61,7 @@ input[type=text] ,select{
 
 h2 {
     background: #ecf2f5;
-    width: 340px;
+    width: 380px;
     height: 35px;
     padding: 15px 0px 5px 0px;
     font-size: 25px;
@@ -75,14 +77,7 @@ h2 {
 	
 }
 
-span {
-	font-family: "Helvetica Neue", Helvetica, sans-serif;
-	color: #D8000C;
-	font-size: 14px;
-	position: fixed;
-	top: 25%;
-	left: 39%;
-}
+
 
 button {
 	font-family: "Helvetica Neue", Helvetica, sans-serif;
@@ -100,23 +95,40 @@ button {
 	cursor: pointer;
 	box-shadow: 3px 3px grey;
 }
-</style>
-<title>Contact Information Page</title>
+h3{
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 25px;
+    text-align: center;
+	color: #D8000C;
+}</style>
 </head>
 <body>
-	<form name ="contactinfomn"  id="contactinfomn" action="/cInfo" method ="post">
-	<div class="container">
-		<h2> Enter your Contact details </h2>
-			<label for="address">Address: </label><input type="text" name="address" /> <br> 
-		<label for="city">	City: </label><input type="text" name="city" /><br>
-			<label for="state">	 State: </label><input type="text" name="state" /> <br> 
-			<label for="country">	Country: </label><select name="country">
-				<option value="India">India</option>
-				<option value="usa">USA</option>
-			</select><br>
-			<label for="phoneno"> Phone No:</label> <input type="text" name="phoneno" /> <br>
+	<%
+			Object obj = request.getAttribute("errMsg");
+			if(obj!=null){
+			String error =(String)obj;
+			%> 
+		
+	<form id="personalinfo" name="personalinfo" action="/BankWebApp/pInfo" method = "post">
+		<h3>Error: <%=error%></h3>
+			<%} %>	
+	
+		<div class="container">
+
+			<h2>Enter your Personal details</h2>
+
+			<label for="firstname">First Name: </label> <input type="text"
+				name="firstname" /> <br> <label for="middlename">
+				Middle Name: </label> <input type="text" name="middlename" /><br>
+			<label for="lastname"> Last Name: </label> <input type="text"
+				name="lastname" /> <br> <label for="gender">
+				Gender: </label> <input type="radio" name="gender" value="male" /> Male <input
+				type="radio" name="gender" value="female" />Female<br>
 			<button>Submit</button>
-			</div>
+				
+
+		</div>
+
 	</form>
 </body>
 </html>

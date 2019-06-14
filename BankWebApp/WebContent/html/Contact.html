@@ -2,8 +2,6 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Personal Information Page</title>
 <style type="text/css">
 html, body {
 	width: 100%;
@@ -15,8 +13,8 @@ html, body {
 
 .container {
 	position: fixed;
-	width: 380px;
-	height: 420px;
+	width: 340px;
+	height: 600px;
 	top: 35%;
 	left: 50%;
 	margin-top: -140px;
@@ -46,7 +44,7 @@ input {
 	outline: none;
 }
 
-input[type=text] {
+input[type=text] ,select{
 	color: #000;
 	padding-left: 10px;
 	margin: 10px;
@@ -61,7 +59,7 @@ input[type=text] {
 
 h2 {
     background: #ecf2f5;
-    width: 380px;
+    width: 340px;
     height: 35px;
     padding: 15px 0px 5px 0px;
     font-size: 25px;
@@ -103,25 +101,28 @@ button {
 	box-shadow: 3px 3px grey;
 }
 </style>
+<title>Contact Information Page</title>
 </head>
 <body>
-	<form id="personalinfo" name="personalinfo" action="/BankWebApp/pInfo" method = "post">
-		
-		<div class="container">
+	<form name ="contactinfomn"  id="contactinfomn" action="/BankWebApp/contact" method ="post">
 
-			<h2>Enter your Personal details</h2>
-
-			<label for="firstname">First Name: </label> <input type="text"
-				name="firstname" required /> <br> <label for="middlename">
-				Middle Name: </label> <input type="text" name="middlename" required /><br>
-			<label for="lastname"> Last Name: </label> <input type="text"
-				name="lastname" required /> <br> <label for="gender">
-				Gender: </label> <input type="radio" name="gender" value="male" /> Male <input
-				type="radio" name="gender" value="female" />Female<br>
+	<div class="container">
+		<h2> Enter your Contact details </h2>
+			<label for="address">Address: </label><input type="text" name="address" /> <br> 
+		<label for="city">	City: </label><input type="text" name="city" /><br>
+			<label for="state">	 State: </label><input type="text" name="state" /> <br> 
+			<label for="country">	Country: </label><select name="country">
+			<option value=""></option>
+				<option value="India">India</option>
+				<option value="USA">USA</option>
+				<option value="Australia">Australia</option>
+				<option value="Europe">Europe</option>
+								
+				
+			</select><br>
+			<label for="phoneno"> Phone No:</label> <input type="text" name="phoneno" /> <br>
 			<button>Submit</button>
-
-		</div>
-
+			</div>
 	</form>
 </body>
 </html>

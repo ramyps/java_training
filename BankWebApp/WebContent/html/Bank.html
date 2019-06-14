@@ -103,17 +103,19 @@ button {
 </style>
 </head>
 <body>
-	<form id="bankinfomn" name="bankinfomn" action="/binfo" method ="post">
+	<form id="bankinfomn" name="bankinfomn" action="/BankWebApp/bank"
+		method="post">
 		<div class="container">
 			<h2>Enter your bank details</h2>
-			<label for="bank">Bank Name:</label> <select name="bank"><option
-					value="bofa">Bank of America</option>
+			<label for="bank">Bank Name:</label> <select name="bank">
+				<option value=""></option>
+				<option value="Wellsfargo">Wells fargo</option>
+				<option value="bofa">Bank of America</option>
 				<option value="western">Western Union</option>
 				<option value="union">Union Bank</option>
-			</select> <br> <label for="accountno">Account#: </label><input
+			</select> <br> <label for="accountno">Account No: </label> <input
 				type="text" name="accountno" /><br> <label for="ssn">SSN:
-			</label><input type="text" name="ssn" /> <br>
-			<br>
+			</label> <input type="text" name="ssn" /> <br> <br>
 
 			<button>Submit</button>
 		</div>
