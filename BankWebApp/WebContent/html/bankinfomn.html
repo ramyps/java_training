@@ -45,7 +45,7 @@ input {
 	outline: none;
 }
 
-input[type=text],select {
+input[type=text], select {
 	color: #000;
 	padding-left: 10px;
 	margin: 10px;
@@ -59,21 +59,20 @@ input[type=text],select {
 }
 
 h2 {
-    background: #ecf2f5;
-    width: 380px;
-    height: 35px;
-    padding: 15px 0px 5px 0px;
-    font-size: 25px;
-    text-align: center;
-    margin-top: 0px;   
-    margin-bottom: 10px;
-    border-bottom: 1px solid #ccc;
-    border-top: 1px solid #ccc;
-    border-bottom-right-radius: 3px;
-    border-bottom-left-radius: 3px;
-    border-radius: 10px 10px 0px 0px;
+	background: #ecf2f5;
+	width: 380px;
+	height: 35px;
+	padding: 15px 0px 5px 0px;
+	font-size: 25px;
+	text-align: center;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	border-radius: 10px 10px 0px 0px;
 	float: right;
-	
 }
 
 span {
@@ -104,19 +103,20 @@ button {
 </style>
 </head>
 <body>
-<form id="bankinfo" name="bankinfo" action="/success.html">
-<div class="container">
-
+	<form id="bankinfomn" name="bankinfomn" action="/binfo" method ="post">
+		<div class="container">
 			<h2>Enter your bank details</h2>
-		<label for="bank">Bank Name:</label> <select name="bank"><option value="bofa">Bank of America</option>
-		<option value="western">Western Union</option>
-		<option value="union">Union Bank</option>
-		</select> <br>
-		<label for="accountno">Account#: </label><input type="text" name="accountno"/><br>
-		<label for="ssn">SSN: </label><input type="text"name="ssn" /> <br><br>
-		
-		<button>Submit</button>
-	</div>
+			<label for="bank">Bank Name:</label> <select name="bank"><option
+					value="bofa">Bank of America</option>
+				<option value="western">Western Union</option>
+				<option value="union">Union Bank</option>
+			</select> <br> <label for="accountno">Account#: </label><input
+				type="text" name="accountno" /><br> <label for="ssn">SSN:
+			</label><input type="text" name="ssn" /> <br>
+			<br>
+
+			<button>Submit</button>
+		</div>
 	</form>
 </body>
 </html>
