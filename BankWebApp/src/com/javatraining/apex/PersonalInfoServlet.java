@@ -20,7 +20,7 @@ public class PersonalInfoServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		BankInfoBean personalInfo = new BankInfoBean();
 
 		String firstname = request.getParameter("firstname");
@@ -39,7 +39,7 @@ public class PersonalInfoServlet extends HttpServlet {
 		
         response.setContentType("text/html");
 
-		response.sendRedirect("/WebContent/html/contactinfomn.html");
+		response.sendRedirect("/BankWebApp/html/Contact.html");
 	
 	}
 

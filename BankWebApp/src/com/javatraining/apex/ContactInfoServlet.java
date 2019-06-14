@@ -13,7 +13,7 @@ import com.javatraining.apex.bean.BankInfoBean;
 /**
  * Servlet implementation class ContactInfoServlet
  */
-@WebServlet("/cInfo")
+@WebServlet("/contact")
 public class ContactInfoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -41,7 +41,7 @@ public class ContactInfoServlet extends HttpServlet {
 
 		HttpSession ses = request.getSession();
 		ses.setAttribute("pinform2", personalInfo);
-		response.sendRedirect("/BankWebApp/WebContent/html/bankinfomn.html");
+		response.sendRedirect("/BankWebApp/html/Bank.html");
 
 	}
 
