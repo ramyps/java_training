@@ -108,7 +108,7 @@ button {
 </style>
 </head>
 <body>
-	<form id="bankinfomn" name="bankinfomn" action="/BankWebApp/bank" method ="post">
+	<form id="bankinfomn" name="bankinfomn" action="/BankWebApp/bankInfo" method ="post">
 	<%
 			Object obj = request.getAttribute("errMsg");
 			if(obj!=null){

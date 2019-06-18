@@ -26,7 +26,6 @@ html, body {
 	border: 1px solid #ccc;
 	box-shadow: 10px 10px grey;
 }
-
 form {
 	margin: 0 auto;
 	margin-top: 20px;
@@ -76,9 +75,6 @@ h2 {
 	float: right;
 	
 }
-
-
-
 button {
 	font-family: "Helvetica Neue", Helvetica, sans-serif;
 	float: right;
@@ -100,7 +96,8 @@ h3{
 	font-size: 25px;
     text-align: center;
 	color: #D8000C;
-}</style>
+}
+</style>
 </head>
 <body>
 	<%
