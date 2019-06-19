@@ -34,7 +34,8 @@ public class MYSQLDBAccess {
 
 			//step3
 			dbConn = DriverManager.getConnection(url, "root", "Urlucky1@19");
-			System.gc();
+			System.out.println("Database connection established");
+//			System.gc();
 
 		}
 		catch (SQLException sqle) {

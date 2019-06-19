@@ -37,19 +37,19 @@ public class MyUtils {
     }
  
     // Store user info in Session.
-    public static void storeLoginedUser(HttpSession session, PersonalAccount person) {
+    public static void storePersonFirstName(HttpSession session, PersonalAccount person) {
         // On the JSP can access via ${loginedUser}
         session.setAttribute("personInfo", person);
     }
  
     // Get the user information stored in the session.
-    public static PersonalAccount getLoginedUser(HttpSession session) {
+    public static PersonalAccount getPersonFirstName(HttpSession session) {
     	PersonalAccount personSession = (PersonalAccount) session.getAttribute("personInfo");
         return personSession;
     }
  
     // Store info in Cookie
-    public static void storeUserCookie(HttpServletResponse response, PersonalAccount person) {
+    public static void storePersonCookie(HttpServletResponse response, PersonalAccount person) {
         System.out.println("Store user cookie");
         Cookie cookieFirstName = new Cookie(ATT_NAME_FIRST_NAME, person.getFirstName());
         // 1 day (Converted to seconds)
@@ -57,7 +57,7 @@ public class MyUtils {
         response.addCookie(cookieFirstName);
     }
  
-    public static String getUserNameInCookie(HttpServletRequest request) {
+    public static String getPersonNameInCookie(HttpServletRequest request) {
         Cookie[] cookies = request.getCookies();
         if (cookies != null) {
             for (Cookie cookie : cookies) {
@@ -70,7 +70,7 @@ public class MyUtils {
     }
  
     // Delete cookie.
-    public static void deleteUserCookie(HttpServletResponse response) {
+    public static void deletePersonCookie(HttpServletResponse response) {
         Cookie cookieUserName = new Cookie(ATT_NAME_FIRST_NAME, null);
         // 0 seconds (This cookie will expire immediately)
         cookieUserName.setMaxAge(0);

@@ -26,3 +26,21 @@ update bankdb set `middlename` ='chethu' where ssn= '12345678912';
 select * from  bankdb;
 
 delete from bankdb where ssn ='12345678912';
+
+
+use test;
+CREATE TABLE `bankdb` (
+   `firstname` varchar(60) NOT NULL default '',
+  `middlename` varchar(20) ,
+  `lastname` varchar(60) ,
+    `gender` varchar(6) ,
+      `address` varchar(60) ,
+      `city` varchar(20) ,  
+      `state` varchar(20) ,
+        `country` varchar(20) ,
+  `mobileno` varchar(10),
+      `bank` varchar(20) ,
+      `accountno` varchar(12),
+   `ssn` varchar(12) NOT NULL default '',
+  PRIMARY KEY  (`ssn`)
+) ;

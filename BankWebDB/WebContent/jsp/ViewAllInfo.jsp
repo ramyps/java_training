@@ -7,20 +7,15 @@
 <style type="text/css">
   <%@include file="/css/style.css"%>
 </style>
-<title>Success Page</title>
+<title>View Page</title>
 </head>
-<body> <jsp:include page="_header.jsp"></jsp:include>
-    <jsp:include page="_menu.jsp"></jsp:include>
+<body>
 <Header>
-		<h1>Registration Success</h1>
 	</Header>
 
- <form><%	String varFirstName = (String) request.getSession().getAttribute("firstName");
-			%>	
-	
-	<h1>	<%if (varFirstName != null){%>
-	Hi  <%=varFirstName%></h1>	
-<%}%>
+ <jsp:include page="_header.jsp"></jsp:include>
+    <jsp:include page="_menu.jsp"></jsp:include>
+	<form id="personalinfo" name="personalinfo" action="/BankWebDB/viewInfo" method = "post">
  	<table style="float:left;">
  	<jsp:useBean id="personInfoSession" class= "com.java.apex.bankdb.beans.PersonalAccount" scope="session" />
  		<caption>Personal Details</caption>
@@ -42,15 +37,15 @@
 		 	 	</table>
 		 		
 		 		<jsp:useBean id="bankInfoSession" class= "com.java.apex.bankdb.beans.BankAccount" scope="session" />
-			 	<table>
-		
+	 	<table style="float:right;">
 		<caption> Bank Details </caption>		
 		<tr><td>Bank Name :</td><td>  <jsp:getProperty property="bank" name="bankInfoSession" /></td></tr>
 		<tr><td>Account Number : </td><td><jsp:getProperty property="accountNo" name="bankInfoSession"/></td></tr>
 		<tr><td>SSN : </td><td><jsp:getProperty property="SSN" name="bankInfoSession" /></td></tr>
 			
 			</table>
-		<jsp:include page="_footer.jsp"></jsp:include>
-	</form>
+			
+			 <jsp:include page="_footer.jsp"></jsp:include>
+			</form>
 </body>
 </html>

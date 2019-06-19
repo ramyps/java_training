@@ -26,16 +26,21 @@ public class PersonalInfoServlet extends HttpServlet {
 		ValidateFields validateFields = new ValidateFields();
 		String errors="";
 
-		String firstName = request.getParameter("firstName");
-		String middleName = request.getParameter("middleName");
-		String lastName = request.getParameter("lastName");
-		String gender = request.getParameter("gender");
-		personalInfo.setFirstName(firstName);
-		personalInfo.setLastName(lastName);
-		personalInfo.setMiddleName(middleName);
-		personalInfo.setGender(gender);
+//		String firstName = request.getParameter("firstName");
+//		String middleName = request.getParameter("middleName");
+//		String lastName = request.getParameter("lastName");
+//		String gender = request.getParameter("gender");
+		personalInfo.setFirstName(request.getParameter("firstName"));
+		personalInfo.setLastName(request.getParameter("lastName"));
+		personalInfo.setMiddleName(request.getParameter("middleName"));
+		personalInfo.setGender(request.getParameter("gender"));
+		
+    	request.getSession().setAttribute("firstName", request.getParameter("firstName"));
+    	request.getSession().setAttribute("middleName", request.getParameter("middleName"));
+    	request.getSession().setAttribute("lastName", request.getParameter("lastName"));
+    	request.getSession().setAttribute("gender", request.getParameter("gender"));
 
-		System.out.println("Personal  details set " + firstName + " "+gender);
+		System.out.println("Personal  details set " + request.getParameter("firstName") + " "+request.getParameter("gender"));
 
 
 //
@@ -56,15 +61,15 @@ public class PersonalInfoServlet extends HttpServlet {
 //		}
 		
 		HttpSession ses = request.getSession();
-		response.setContentType("text/html");
+//		response.setContentType("text/html");
 //		System.out.println(validateFields.isBlank(errors));
 		if(validateFields.isBlank(errors)) {
 			ses.setAttribute("personInfoSession", personalInfo);
-			response.sendRedirect("/BankWebApp/html/Contact.html");
+			response.sendRedirect("/BankWebDB/jsp/Contact.jsp");
 		}else {
-//			ses.setAttribute("pinform1", personalInfo);
+			ses.setAttribute("personInfoSession", personalInfo);
 			request.setAttribute("errMsg", errors);
-			response.sendRedirect("/BankWebApp/jsp/Personal.jsp");
+			response.sendRedirect("/BankWebDB/jsp/Personal.jsp");
 		}
 	
 

@@ -10,7 +10,9 @@
 <title>Personal Information Page</title>
 </head>
 <body>
-	<form id="personalinfo" name="personalinfo" action="/BankWebApp/personInfo" method = "post">
+ <jsp:include page="_header.jsp"></jsp:include>
+    <jsp:include page="_menu.jsp"></jsp:include>
+	<form id="personalinfo" name="personalinfo" action="/BankWebDB/personInfo" method = "post">
 	<%
 			Object obj = request.getAttribute("errMsg");
 			if(obj!=null){
@@ -20,18 +22,19 @@
 	
 <h1>Enter Your Personal Details </h1>
 			<div>
-			<label for="firstname">First Name: </label> <input type="text"
-				name="firstname" /> 
-				<br> <label for="middlename">
-				Middle Name: </label> <input type="text" name="middlename" />
+			<label for="firstName">First Name: </label> <input type="text"
+				name="firstName" /> 
+				<br> <label for="middleName">
+				Middle Name: </label> <input type="text" name="middleName" />
 				<br>
-			<label for="lastname"> Last Name: </label> <input type="text"
-				name="lastname" /> <br> <label for="gender">
+			<label for="lastName"> Last Name: </label> <input type="text"
+				name="lastName" /> <br> <label for="gender">
 				Gender: </label> <input type="radio" name="gender" value="male" /> Male
 				 <input
 				type="radio" name="gender" value="female" />Female<br>
 			<button>Submit</button>
-			</div>
+			</div>      <jsp:include page="_footer.jsp"></jsp:include>
+			
 			</form>
 </body>
 </html>	

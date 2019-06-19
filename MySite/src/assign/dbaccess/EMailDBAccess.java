@@ -212,7 +212,7 @@ public class EMailDBAccess {
 		pStmt.setString(1, inEMailID);
 		
    		rowsDeleted = pStmt.executeUpdate();
-
+System.out.println(rowsDeleted +" rows deleted for" +inEMailID);
 		if (rowsDeleted != 1) {
 			throw new Exception("Error in deleting the row");
 
@@ -284,7 +284,7 @@ public class EMailDBAccess {
 		pStmt.setString(1, inGroupID);
    		rs = pStmt.executeQuery();
 
-		if (rs.next()) {
+		while (rs.next()) {
 		eMailAddress = new EMailAddressVOO(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
 						rs.getString(6), rs.getString(7), rs.getString(8));
 		eMailList.add(eMailAddress);
@@ -480,7 +480,7 @@ public class EMailDBAccess {
 public static void main(String[] arg){
 	EMailDBAccess eMailDBAccess = new EMailDBAccess();
 	try{
-	eMailDBAccess.getEMailAddress("aa@yahoo.com");
+//	eMailDBAccess.getEMailAddress("aa@yahoo.com");
 	} catch (Exception e){
 		e.printStackTrace();
 	}

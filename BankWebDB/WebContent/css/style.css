@@ -1,20 +1,64 @@
 @charset "UTF-8";
 
 body {
-	background-color: powderblue;
+	background-color: #cacaca;
 }
 
 h1 {
-	color: blue;
+	color: #503dce;
 	text-align: center;
 }
 
-div {
-	color: purple;
+div, h2 {
+	color: #503dce;
 	text-align: center;
 }
-
+header{
+	color: #503dce;
+	text-align: center;
+	font-size: 250%;
+	letter-spacing: 5px;
+    font-weight: bold;
+	
+}
 h3 {
 	color: red;
 	text-align: center;
+}
+p {
+	color: #9e9e9e;
+	text-align: center;
+	    font-size: 50%;
+	
+}
+table {
+	width: "900";
+ 	 border: "0";
+	cellspacing : "0"; 
+	cellpadding : "0";
+	border-collapse: collapse;
+	padding: 5px;
+	float: left;
+	color: #503dce;
+	
+	
+}caption {
+    text-align: center;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+    font-size: 100%;
+    padding: 5px;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+
+ th, td {
+	width: "100";
+	border-collapse: collapse;
+	padding: 15px;
+	font-size: 20px;
+	text-align: left;
+	color: #503dce;
+	
+}
 }

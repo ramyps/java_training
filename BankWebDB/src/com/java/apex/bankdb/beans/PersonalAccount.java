@@ -6,17 +6,7 @@ public class PersonalAccount {
 	String middleName;
 	String lastName ;
 	String gender;
-	
-	String address ;
-	String city ;
-	String state ;
-	String country ;
-	String mobileNo;
-	
-	String bank;
-	String accountNo;
-	String SSN;
-	
+
 
 
 
@@ -63,58 +53,51 @@ public class PersonalAccount {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-
-
+	
+	
+	//Contact 
+	String address ;
+	String city ;
+	String state ;
+	String country ;
+	String mobileNo;
 	public String getAddress() {
 		return address;
 	}
-
-
 	public void setAddress(String address) {
 		this.address = address;
 	}
-
-
 	public String getCity() {
 		return city;
 	}
-
-
 	public void setCity(String city) {
 		this.city = city;
 	}
-
-
 	public String getState() {
 		return state;
 	}
-
-
 	public void setState(String state) {
 		this.state = state;
 	}
-
-
 	public String getCountry() {
 		return country;
 	}
-
-
 	public void setCountry(String country) {
 		this.country = country;
 	}
-
-
 	public String getMobileNo() {
 		return mobileNo;
 	}
-
-
 	public void setMobileNo(String mobileNo) {
 		this.mobileNo = mobileNo;
 	}
 
-
+	
+	//Bank 
+	
+	String bank;
+	String accountNo;
+	String SSN;
 	public String getBank() {
 		return bank;
 	}
@@ -130,12 +113,7 @@ public class PersonalAccount {
 	public String getSSN() {
 		return SSN;
 	}
-	public void setSSN(String SSN) {
-		this.SSN = SSN;
+	public void setSSN(String sSN) {
+		SSN = sSN;
 	}
-
-
-
-
-
 }

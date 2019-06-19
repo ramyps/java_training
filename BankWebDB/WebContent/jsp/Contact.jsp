@@ -11,7 +11,9 @@
 </head>
 
 <body>
-	<form name ="contactinfomn"  id="contactinfomn" action="/BankWebApp/contactInfo" method ="post">
+ <jsp:include page="_header.jsp"></jsp:include>
+    <jsp:include page="_menu.jsp"></jsp:include>
+	<form name ="contactinfomn"  id="contactinfomn" action="/BankWebDB/contactInfo" method ="post">
 
 <h1>Enter Your Personal Details </h1>
 	<%
@@ -19,9 +21,13 @@
 			if(obj!=null){
 			String error =(String)obj;
 			%> 	<h3>Error: <%=error%></h3>
-			<%} %>	
+			<%} 			String varFirstName = (String) request.getSession().getAttribute("firstName");
+			%>	
 	
 			<div>
+			<%if (varFirstName != null){%>
+	Hi  <%=varFirstName%>
+<%}%>
 	<label for="address">Address: </label><input type="text" name="address" /> <br> 
 		<label for="city">	City: </label><input type="text" name="city" /><br>
 			<label for="state">	 State: </label><input type="text" name="state" /> <br> 
@@ -36,7 +42,7 @@
 			<button>Submit</button>
 
 		
-			</div>
+			</div>  <jsp:include page="_footer.jsp"></jsp:include>
 			</form>
 </body>
 </html>
