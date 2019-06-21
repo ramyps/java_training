@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<!--  - Application context definition for "springapp" DispatcherServlet. -->
+<beans>
+<!-- Controller for hello.htm -->
+
+  	<bean id="addUserController"
+		class="com.vs.hr.contrl.AddUserController" >
+		<property name="sessionForm"><value>false</value></property>
+		<property name="commandName"><value>user</value></property>
+        <property name="commandClass"><value>com.vs.hr.vo.UserVO</value></property>
+        <property name="formView"><value>person</value></property>
+        <property name="successView"><value>success</value></property>
+		<property name="userBO">
+            <ref bean="userboref"/>
+        </property> 
+	</bean>
+
+
+<!-- URL resolvers -->
+
+		<bean id="urls"
+		class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="/addUser.do">addUserController</prop>
+			</props>
+		</property>
+	</bean>
+	
+<!--  bos -->
+
+	<bean id="userboref" class="com.vs.hr.bo.UserBOImpl">
+	    <property name="usrDAO">
+            <ref bean="userdaoref"/>
+        </property>      
+	</bean>
+	
+<!--  validators -->
+
+
+<!--  DAOs -->
+
+	<bean id="userdaoref" class="com.vs.hr.dao.UsrDAOImpl">
+	    <property name="dataSource">
+            <ref bean="ds"/>
+        </property>  
+	</bean>	
+	
+<!-- Datasources -->
+
+    <bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+      <property name="driverClassName"><value>com.mysql.jdbc.Driver</value></property>
+      <property name="url">
+     <value>jdbc:mysql://localhost:3306/test?autoReconnect=TRUE&amp;useSSL=FALSE&amp;serverTimezone=UTC</value> 
+      <!--  <value>jdbc:mysql://localhost:3306/test</value> --> 
+      </property>
+      <property name="username"><value>root</value></property>
+      <property name="password"><value>Urlucky1@19</value></property>
+    </bean>
+
+<!-- View Resolver -->
+	<bean id="viewResolver"
+	      class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
+          <property name="prefix">
+              <value>/jsp/</value>
+           </property>
+          <property name="suffix">
+             <value>.jsp</value>
+          </property>
+    </bean>
+</beans>

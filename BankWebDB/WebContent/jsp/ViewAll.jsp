@@ -21,11 +21,14 @@
 
 		  <%
 	  Object[] obj = (Object[]) request.getSession().getAttribute("allPerson");
-	   		PersonalAccount person[] = (PersonalAccount) obj;
+	   		PersonalAccount persons[] =  obj;
 	  %>
  <%
-   	 for(int i=0; i<personList.length;i++){}
-    %>
+	for(PersonalAccount person: persons){
+		
+	}
+ 
+ %>
 
  	<jsp:useBean id="personInfoSession" class= "com.java.apex.bankdb.beans.PersonalAccount" scope="session" />
  	<table style="float:left;">

@@ -28,37 +28,35 @@ import com.java.apex.bankdb.validation.ValidateFields;
 @WebServlet("/viewAllInfo")
 
 public class ViewAllInfoServlet extends HttpServlet {
-		/**
-		 * 
-		 */
-		private static final long serialVersionUID = 1L;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
-		protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-			String errors = "";
-	        response.setContentType("text/html");
-	        
-			PersonalAccount person[] = null;
-	
-				try {				
-					System.out.println("Connecting to database...\n ");
-					ArrayList personList = DBUtils.allPersons(ConnectionUtils.getConnection());
-					Object[] aList = personList.toArray(new PersonalAccount[personList.size()]);
-					person = new PersonalAccount[personList.size()];
-					for(int i =0;i<aList.length;i++) {
-						person[i] = (PersonalAccount) aList[i];
-						System.out.println(person[i].getFirstName());
-					}
+		String errors = "";
+		response.setContentType("text/html");
 
+		PersonalAccount person[] = null;
 
-				}
-				catch (ClassNotFoundException | SQLException e) {
-					e.printStackTrace();
-				}
-				
-				request.getSession().setAttribute("allPerson", person);	
-				response.sendRedirect("/BankWebDB/jsp/ViewAllInfo.jsp");	
-
+		try {				
+			System.out.println("Connecting to database...\n ");
+			ArrayList personList = DBUtils.allPersons(ConnectionUtils.getConnection());
+			Object[] aList = personList.toArray(new PersonalAccount[personList.size()]);
+			person = new PersonalAccount[personList.size()];
+			for(int i =0;i<aList.length;i++) {
+				person[i] = (PersonalAccount) aList[i];
+				System.out.println(person[i].getFirstName());
+			}
 		}
+		catch (ClassNotFoundException | SQLException e) {
+			e.printStackTrace();
+		}
+
+		request.getSession().setAttribute("allPerson", person);	
+		response.sendRedirect("/BankWebDB/jsp/ViewAllInfo.jsp");	
+
+	}
 
 }

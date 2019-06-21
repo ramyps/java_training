@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+  "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="client"  class="com.apex.client.BasicClient">
+		<property name="calc" ref ="server"/>
+			
+	</bean>
+	
+	<bean id="server" class="com.apex.server.BasicCalc" />
+
+	<bean id="obj2" class="com.apex.server.MyCalc" />
+</beans>
