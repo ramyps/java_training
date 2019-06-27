@@ -5,7 +5,16 @@ package com.java.code30days.challenge.hackerrank;
 
 /**
  * @author Ramy
- *
+ *Input (stdin)Download
+6
+3
+5
+4
+7
+2
+1
+Your Output (stdout)
+3 2 5 1 4 7 
  */
 
 import java.util.*;
@@ -22,7 +31,15 @@ class Day23_BST{
 
 static void levelOrder(Node2 root){
       //Write your code here
-      
+	 Queue<Node2> queue = new LinkedList();
+	    queue.add(root);
+	    System.out.println(root.data);
+	    while(!queue.isEmpty()){
+	        Node2 current = queue.remove();
+	        System.out.print(current.data+" ");
+	        if (current.left!=null) queue.add(current.left); 
+	        if (current.right!=null) queue.add(current.right);
+	    }
     }
 
 public static Node2 insert(Node2 root,int data){

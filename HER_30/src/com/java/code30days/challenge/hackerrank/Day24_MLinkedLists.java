@@ -47,7 +47,7 @@ class Day24_MLinkedLists
     }
     public static void display(Node1 head)
         {
-              Node1 start=head;
+              Node1 start = head;
               while(start!=null)
               {
                   System.out.print(start.data+" ");
