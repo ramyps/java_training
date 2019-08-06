@@ -41,7 +41,7 @@ public class array {
 
         int arrCount = Integer.parseInt(bufferedReader.readLine().trim());
 
-        List<String> arrTemp = new ArrayList<>();
+        List<String> arrTemp = new ArrayList<String>();
 
         IntStream.range(0, arrCount).forEach(i -> {
             try {

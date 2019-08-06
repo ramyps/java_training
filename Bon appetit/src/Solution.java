@@ -12,6 +12,10 @@ import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
 public class Solution {
+	
+//	4 1
+//	3 10 2 9
+//	7
 
     // Complete the bonAppetit function below.
     static void bonAppetit(List<Integer> bill, int k, int b) {

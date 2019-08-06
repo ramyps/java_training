@@ -12,6 +12,9 @@ import java.util.stream.*;
 import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
+//4 1
+//3 10 2 9
+//7
 public class BonAppetit {
 
     // Complete the bonAppetit function below.
